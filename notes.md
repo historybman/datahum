@@ -175,3 +175,71 @@ Unsupervised: finds new patterns in the data; the advantage of the supervised ap
 You want the model just complex enough to fit the data but not too much!  
 
 Precision and recall: how many of the results that we said were positive were actually positive, vs. what proportion of the ones that we should have gotten did we actually get? 
+
+# February 28, 2017
+
+## Quantitative formalism article w/ Moretti and Jockers
+
+Are they producing new knowledge?
+
+What is unsupervised learning?  Real quick tour... 
+
+Week 7: Unsupervised Learning
+- Infers structure in unlabeled data
+
+## K-means clustering: if you ever have to cluster data points on a two dimensional plane.
+
+- Start by randomly selecting k data points as the centroids of clusters
+- Until things stabilize:
+	- assign every real data point to the nearest centroid
+	- move each centroid to the "center of gravity" defined by the average of all points assigned to it.  
+
+Pretty basic assumption that the clusters are "convex", aka round.
+
+There are no guarantees because if you start at the wrong locations with k you can wind up with one of the centroids not finding a cluster; How do you choose a k?  
+
+Also k means works best in low dimensional data where distance is meaningful; in text this is often not the case.  
+
+Other methods
+
+## Hierarchical clustering
+
+- Builds from the bottom up.  Let's find the closest pair, then the closest "n" group, until you get to a logical place to stop, or the number of clusters that you feel is meaningful.  
+
+- How to decide how many clusters is tricky.
+
+- Dendrogram will visualize these cluster relationships.
+
+### Hierarchical linkage criteria
+
+Choose clusters by different logics, different rationales like lowest maximium distance between any pair. 
+
+### DBSCAN: density based spatial clustering.  
+
+## Curse of dimensionality, though
+- the problem with high-dimensional data is not *just* technical or geometrical. The problem is, there could be multiple kinds of similarity in this space (subsets of dimensions).
+- Compressing them all into a single generalized 'similarity' is not guaranteed to produce meaningful results.
+
+## Solutions? 
+- "Topic Modeling": acknowledges that we're dealing with "multiple kinds of similarity." But it's complex enough for a separate day.
+- Alternatively, we could try to _reduce_ the number of dimensions, and then proceed with clustering..
+
+## Dimensionality reduction
+- Principal Component Analysis (just factoring the matrix). Just like Latent semantic analysis.
+- some complex matrix algebra involved here.  
+
+## PCA
+- The factoring used in PCA (singular value decomposition) has other applications too
+- Choices about scaling can make things volatile.  
+
+## Manifold learning
+- MDS (multidimensional scaling) tries to preserve original relative distances in a 2-dimensional projection
+- T-SNE is a more complicated probabilistic solution to that problem.
+
+## Grains of Salt
+- Interpretation always starts from some assumption.
+	- assumptions like "most frequent words matter"; or "all the words matter"
+- People are attracted to unsupervised learning because it seems not to be importing external assumptions
+- But that means that the assumptions are calling from inside the house.
+
+
