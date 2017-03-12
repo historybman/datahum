@@ -242,4 +242,46 @@ Choose clusters by different logics, different rationales like lowest maximium d
 - People are attracted to unsupervised learning because it seems not to be importing external assumptions
 - But that means that the assumptions are calling from inside the house.
 
+# March 7, 2017
+Going over homework from Week 6. 
 
+REgularization forces you to have a simple boundary; prevents you from overfitting. 
+
+Discussion of Pasanek, Sculley; Horton et. al on the 
+
+## Ted's comments for the deay: A menagerie of learning strategies.
+A tour of the options; a tour of the menagerie.
+
+Learning algorithm: updtae boundary by pulling it toward misclassified examples.
+
+HOw Logistic regression is different: Instead of a step function, the linear input is mapped to [0,1] with a logistic function.  In effect this means the boundary is blurry.
+
+Also a regression algorithm optimizes the whole set. Prevents overfitting.
+
+## Ensemble methods
+- A combination of several different models can often perform better than any single model. 
+- Why? This should be counter-intuitive; bias - variance tradeoff. The risk of overfitting should become a problem here. 
+- The reason is that the errors are _uncorrelated_; this can reduce bias without increasing variance. 
+- Bagging (bootstrap aggregating): generate a lot of models and make them "vote." A bootstrap sample is a 2/3 sample; with the possibility of sampling some of them more than once. 
+- Boosting also is like this; here you focus on misclassified examples). 
+
+## Random forests
+- A bootstrap aggregate of decision trees, each working in a random subspace of the whole feature space.
+
+## Support Vector Machines
+- The separating hyperplane is often underspecified by an imperative to "minimize error." THis is still basically the state of the art for text classification. 
+
+THe basic strategy os we are going to minimize the error.  
+
+How do we pick the hyperplane that distinguishes: You want to maximize the margin:
+- SVM adopt the more demanding goal of "maximizing the margin."
+
+## The kernel trick
+distorts the problem space with another dimension in order to separate
+
+## For humanists, and in the prive sector, optimizing accuracy is rarely the only goal
+- Complicated ensembles are tricky to implement
+- Complex algorithms can be hard to explain. 
+
+## Questions are rarely binary
+- Multi-class prediction(directly, or via one-vs-all, or one-vs-one, strategies).
