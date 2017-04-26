@@ -285,3 +285,49 @@ distorts the problem space with another dimension in order to separate
 
 ## Questions are rarely binary
 - Multi-class prediction(directly, or via one-vs-all, or one-vs-one, strategies).
+
+# April 25, 2017
+
+Neural network processing of images-- 
+
+Piper's "gaps" vs. Wallach's
+
+## Piper
+
+- Generality
+- Explicitness: reproducible and collective rather than agonistic and opaque
+- Self-reflexivity: models foreground the limits of knowledge
+	- there will be places in the model where you acknowledge an assumption
+	- explicit about the limits of your theory
+- Relevance
+
+## Wallach
+
+- Privacy
+- Fairness
+- Question-driven rather than data-driven
+- Not just predictive, but explanatory and exploratory
+
+Acknowledging your situatedness is a strength that humanities bring to the table. 
+
+## What are we gaining or losing from the neural network algorithms?
+
+## Blei's article
+
+The article covers the new hotness of 2013...
+
+Build computer critique repeat...
+
+THinking about quantitative model as a practical process-- 
+
+- Some going off-road involved
+
+- A bit of math
+	- clusters and dots; different assignments to different clusters; hidden variables and actual datapoints. 
+	- it's a predictive model, so we're assuming some hyperparameters and some hidden variables, and with those two unknowns, we have to estimate the probability of the data points that we have.  WE make a model of that: and we can then , as we have done in the past, take a NEW document, and then test how likely that new document could have been created by the model.  
+
+The Triage question!!  
+
+
+
+
